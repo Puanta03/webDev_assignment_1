@@ -31,6 +31,105 @@
             color: blue;
         }
     </style>
+
+<style>
+    /* Combining CSS Selectors */
+    body, h1, p, ul {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: 20px auto; /* Centering container */
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* CSS Positioning */
+    .header {
+        position: relative;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+
+    h2 {
+        color: #333;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+
+    hr {
+        border: 1px solid #ddd;
+        margin: 20px 0;
+    }
+
+    ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+
+    /* Float */
+    nav {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: blue;
+        float: left; /* Floating navigation links */
+    }
+
+    /* CSS Display */
+    .skills {
+        display: inline-block; /* Displaying skills inline */
+        margin-right: 10px;
+        padding: 5px;
+        background-color: #e0e0e0;
+        border-radius: 5px;
+    }
+
+    /* Flexbox */
+    .content-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Grid */
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+    }
+
+    .gallery img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    /* Media Queries */
+    @media (max-width: 600px) {
+        .container {
+            padding: 10px;
+        }
+        nav a {
+            display: block; /* Stack navigation links on small screens */
+            float: none;
+            margin: 10px 0;
+        }
+    }
+</style>
 </head>
 <body>
     <div class="container">

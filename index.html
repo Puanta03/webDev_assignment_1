@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,36 +8,59 @@
     <title>SpongeBob - Resume</title>
     
     <style>
+        /* Combining CSS Selectors */
+        body, h1, h2, p, ul {
+            margin: 0;
+            padding: 0;
+        }
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
             background-color: #f0f0f0;
         }
+        
         .container {
             max-width: 800px;
-            margin: auto;
+            margin: 20px auto; /* Centering container */
             background: #fff;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        
+        /* CSS Positioning */
+        .header {
+            position: relative;
+        }
+        .header img {
+            position: absolute; /* Positioning image to the right */
+            top: 10px;
+            right: 10px;
+            width: 150px;
+            border-radius: 10px;
+        }
+        
         h1 {
             text-align: center;
         }
+
         h2 {
             color: #333;
         }
+
         p {
             line-height: 1.6;
         }
+
         hr {
             border: 1px solid #ddd;
             margin: 20px 0;
         }
+
         ul {
             list-style-type: disc;
             margin-left: 20px;
         }
+
+        /* Float */
         nav {
             text-align: center;
             margin-bottom: 20px;
@@ -45,32 +69,82 @@
             margin: 0 15px;
             text-decoration: none;
             color: blue;
+            float: left; /* Floating navigation links */
+        }
+
+        /* CSS Display */
+        .skills {
+            display: inline-block; /* Displaying skills inline */
+            margin-right: 10px;
+            padding: 5px;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+        }
+
+        /* Flexbox */
+        .experience {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            nav a {
+                display: block; /* Stack navigation links on small screens */
+                float: none;
+                margin: 10px 0;
+            }
+            .header img {
+                position: static; /* Remove positioning on small screens */
+                display: block;
+                margin: 10px auto;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>SpongeBob</h1>
-        <img src="spongebob headshot.webp" alt="Spongebob headshot" width="300" />
+        <div class="header">
+            <h1>SpongeBob</h1>
+            <img src="spongebob headshot.webp" alt="Spongebob headshot" />
+        </div>
 
         <p><strong>Email:</strong> spongebob@thekrustykrab.com</p>
         <p><strong>Phone:</strong> (334) 441-8088</p>
         
         <!-- Navigation to other pages -->
         <nav>
-            <a href="aboutme.html">About Me</a> | 
-            <a href="hobbies.html">Hobbies</a> | 
+            <a href="aboutme.html">About Me</a> 
+            <a href="hobbies.html">Hobbies</a> 
             <a href="contact.html">Contact Me</a>
         </nav>
 
         <hr>
 
         <h2>Experience</h2>
-        <p><strong>Chef</strong> – The Krusty Krab</p>
-        <p>Duration: August 1990 – Present</p>
-        <p>Head chef at one of the most successful fast food restaurants in Bikini Bottom, 
-           brings a lot of joy and experience to any team he joins. Elite asset, 
-           increases profits because his salary is only a penny.</p>
+        <div class="experience">
+            <p><strong>Chef</strong> – The Krusty Krab</p>
+            <p>Duration: August 1990 – Present</p>
+            <p>Head chef at one of the most successful fast food restaurants in Bikini Bottom, 
+            brings a lot of joy and experience to any team he joins. Elite asset, 
+            increases profits because his salary is only a penny.</p>
+        </div>
 
         <hr>
 
@@ -82,16 +156,17 @@
 
         <h2>Skills</h2>
         <ul>
-            <li>Proactive</li>
-            <li>Enthusiastic</li>
-            <li>Passionate</li>
+            <li class="skills">Proactive</li>
+            <li class="skills">Enthusiastic</li>
+            <li class="skills">Passionate</li>
         </ul>
 
         <hr>
 
         <h2>Gallery</h2>
-        <img src="sponge bob working.jpg" alt="Spongebob working" width="300" />
-
+        <div class="gallery">
+            <img src="sponge bob working.jpg" alt="Spongebob working" />
+        </div>
     </div>
 </body>
 </html>
